@@ -1,22 +1,18 @@
 package com.springstudy.bbs.service;
 
-import java.util.List;
+import java.util.Map;
 
 import com.springstudy.bbs.domain.Board;
 
 public interface BoardService {
 	
-	/* BoardDao를 이용해 게시판 테이블에서
-	 * 현재 페이지에 해당하는 게시 글 리스트를 읽어와 반환 하는 메소드
-	 **/
-	public abstract List<Board> boardList();
+	/* BoardDao를 이용해 게시판 테이블에서 현재 페이지에 해당하는 게시글 리스트를 읽어와*/
+	public abstract Map<String, Object> boardList(int pageNum);
 	
-	/* BoardDao를 이용해 게시판 테이블에서
-	 * no에 해당하는 게시 글 을 읽어와 반환하는 메서드 
-	 **/
+	/* BoardDao를 이용해 게시판 테이블에서 no에 해당하는 게시글 을 읽어와 반환하는**/
 	public abstract Board getBoard(int no);
 	
-	// BoardDao를 이용해 새로운 게시 글을 추가하는 메서드
+	// BoardDao를 이용해 새로운 게시 글을 추가
 	public abstract void insertBoard(Board board);
 
 	/* 게시 글 수정과 삭제 할 때 비밀번호가 맞는지 체크하는 메서드	
@@ -31,4 +27,5 @@ public interface BoardService {
 	
 	// BoardDao를 이용해 no에 해당하는 게시 글을 삭제하는 메서드
 	public abstract void deleteBoard(int no);
+	
 }

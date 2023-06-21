@@ -3,75 +3,121 @@ package com.springstudy.bbs.domain;
 import java.sql.Timestamp;
 
 public class Board {
-	// no, title, writer, content, reg_date, read_count, pass, file1
+	
 	private int no;
-	private String title;	
+	private String code;
+	private String name;
 	private String writer;
-	private String content;
-	private Timestamp regDate;
-	private int readCount;
+	private int price;
+	private String ram;
+	private String ssd;
+	private String inch;
+	private String desciption;
 	private String pass;
 	private String file1;
 	
-	public Board() { }
-	public Board(int no, String title, String writer, String content, 
-			Timestamp regDate, int readCount, String pass, String file1) {
+	public Board() {}
+	
+	public Board(int no, String code, String name, String writer, int price, String ram, String ssd, String inch, String desciption, String pass, String file1) {
 		this.no = no;
-		this.title = title;
+		this.code = code;
+		this.name = name;
 		this.writer = writer;
-		this.content = content;		
-		this.regDate = regDate;
-		this.readCount = readCount;
+		this.price = price;
+		this.ram = ram;
+		this.ssd = ssd;
+		this.inch = inch;
+		this.desciption = desciption;
 		this.pass = pass;
 		this.file1 = file1;
 	}
-	
+
 	public int getNo() {
 		return no;
 	}
+
 	public void setNo(int no) {
 		this.no = no;
 	}
-	public String getTitle() {
-		return title;
+
+	public String getCode() {
+		return code;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+
+	public void setCode(String code) {
+		this.code = code;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getWriter() {
 		return writer;
 	}
+
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public String getContent() {
-		return content;
+
+	public int getPrice() {
+		return price;
 	}
-	public void setContent(String content) {
-		this.content = content;
+
+	public void setPrice(int price) {
+		this.price = price;
 	}
-	public Timestamp getRegDate() {
-		return regDate;
+
+	public String getRam() {
+		return ram;
 	}
-	public void setRegDate(Timestamp regDate) {
-		this.regDate = regDate;
+
+	public void setRam(String ram) {
+		this.ram = ram;
 	}
-	public int getReadCount() {
-		return readCount;
+
+	public String getSsd() {
+		return ssd;
 	}
-	public void setReadCount(int readCount) {
-		this.readCount = readCount;
+
+	public void setSsd(String ssd) {
+		this.ssd = ssd;
 	}
+
+	public String getInch() {
+		return inch;
+	}
+
+	public void setInch(String inch) {
+		this.inch = inch;
+	}
+
+	public String getDesciption() {
+		return desciption;
+	}
+
+	public void setDesciption(String desciption) {
+		this.desciption = desciption;
+	}
+
 	public String getPass() {
 		return pass;
 	}
+
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
+
 	public String getFile1() {
 		return file1;
 	}
+
 	public void setFile1(String file1) {
 		this.file1 = file1;
 	}
+	
 }
